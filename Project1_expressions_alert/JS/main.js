@@ -35,5 +35,5 @@
 // document.write(" Mom = " + mom + " " + family);
 // document.write(" Sister = " + sister + " " + family);
 
-// Arithmatic
-document.write(3 + 7 + 8 + 2 + 9 + 1 + 4 + 6);
+// // Arithmatic
+// document.write(3 + 7 + 8 + 2 + 9 + 1 + 4 + 6);
