@@ -21,3 +21,14 @@
 
 // // Concatenating strings together then adding it to the web page
 // document.write(" \"A\" " + " \"B\" " + " \"C\" ");
+
+var family = "Aars",
+    mom = "Amy",
+    sister = "Breanna";
+
+document.write(" Mom = " + mom + " " + family);
+document.write(" Sister = " + sister + " " + family);
+
+var family = family.fontcolor("blue");
+document.write(" Mom = " + mom + " " + family);
+document.write(" Sister = " + sister + " " + family);
