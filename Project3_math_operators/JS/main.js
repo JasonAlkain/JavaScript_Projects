@@ -101,3 +101,12 @@ function BTN_Decrement() {
     // Print to page 
     _MathID.innerHTML = "math_IncDec: " + counter;
 }
+
+function BTN_Random() {
+    var _MathID = document.getElementById("Math_RND");
+    _MathID.innerHTML = "";
+    // Variables
+    var rnd = Math.floor(Math.floor(Math.random() * 20) + 1);
+    // Print to page 
+    _MathID.innerHTML = "math_RND: " + rnd;
+}
