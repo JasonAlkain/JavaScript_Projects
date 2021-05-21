@@ -29,6 +29,10 @@ button:active {
     transform: translateY(4px);
 }
 
+li {
+    padding: 8px;
+}
+
 .container {
     border-top: 2px solid black;
     border-bottom: 2px solid black;

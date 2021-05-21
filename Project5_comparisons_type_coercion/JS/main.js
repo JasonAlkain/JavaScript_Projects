@@ -6,6 +6,7 @@ function OnLoad() {
     BTN_TypeCoercion();
     BTN_Infinite();
     BTN_Boolean();
+    ConsoleCMD();
 }
 
 function BTN_TypeCoercion() {
@@ -27,4 +28,8 @@ function BTN_Boolean() {
     document.getElementById("Boolean").innerHTML = "";
     document.getElementById("Boolean").innerHTML += "Boolean result: ";
     document.getElementById("Boolean").innerHTML += (_A < _B);
+}
+
+function ConsoleCMD() {
+    console.log(783 + 327);
 }
