@@ -3,8 +3,17 @@
  */
 
 var counter = 0;
+var money = 0;
 
 function BTN_MathOperator() {
+    var _MathID = document.getElementById("Math");
+    _MathID.innerHTML = "";
+    // Variables
     counter++;
-    document.getElementById("Math").innerHTML = counter + counter;
+    var _ = money;
+    if (_ == 0) { _ = 1; }
+    money += _;
+    // Print to page 
+    _MathID.innerHTML = "Day: " + counter + "<br>";
+    _MathID.innerHTML += "Balance: " + money + "&yen;";
 }
