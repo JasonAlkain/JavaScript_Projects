@@ -70,5 +70,15 @@ function BTN_ModulusOperators() {
     var _B = 6;
     var math_Mod = _A % _B;
     // Print to page 
-    _MathID.innerHTML = "math_Div: " + _A + " % " + _B + " = " + math_Mod;
+    _MathID.innerHTML = "math_Mod: " + _A + " % " + _B + " = " + math_Mod;
+}
+
+function BTN_ModulusOperators() {
+    var _MathID = document.getElementById("Math_Neg");
+    _MathID.innerHTML = "";
+    // Variables
+    var _A = 25;
+    var math_Neg = -_A;
+    // Print to page 
+    _MathID.innerHTML = "math_Neg: " + math_Neg + " [ changed from: " + _A + " ]";
 }
