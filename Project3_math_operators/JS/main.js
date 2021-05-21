@@ -167,7 +167,7 @@ function BTN_ModulusOperators() {
 /* ===================================
     BTN_ModulusOperators
 =================================== */
-function BTN_ModulusOperators() {
+function BTN_Negation() {
     var _MathID = document.getElementById("Math_Neg");
     _MathID.innerHTML = "";
     /* Variables */
