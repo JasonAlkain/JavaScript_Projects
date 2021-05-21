@@ -63,6 +63,17 @@
         margin: 16px;
         padding: 16px;
     }
+    
+    .halfFloat {
+        width: 30%;
+        border-width: 4px 1px;
+        border-style: solid;
+        border-color: black;
+        border-radius: 8px;
+        margin: 2em auto;
+        padding: 1em;
+        text-align: center;
+    }
 </style>
 
 <body>
@@ -73,6 +84,15 @@
         <div class="fluff">
             <button onclick="BTN_OnClick()">Click Me</button>
             <p class="counter" id="point">Click Count: 0</p>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <h1>PROJECT2_FUNCTIONS SUBMISSION ASSIGNMENT</h1>
+        </div>
+        <div class="fluff">
+            <button onclick="BTN_Operator()">Check Date</button>
+            <p class="container halfFloat" id="date">WEEKDAY <br>MONTH <br>DAY OF THE MONTH <br>YEAR <br>TIME <br>ZONE <br>LOCAL <br>TIME <br>ZONE</p>
         </div>
     </div>
 </body>
