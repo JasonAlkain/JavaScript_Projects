@@ -3,6 +3,7 @@
  */
 
 var counter = 0;
+var day = 0;
 var money = 0;
 var mass = 100;
 
@@ -10,12 +11,12 @@ function BTN_MathOperator() {
     var _MathID = document.getElementById("Math");
     _MathID.innerHTML = "";
     // Variables
-    counter++;
+    day++;
     var _ = money;
     if (_ == 0) { _ = 1; }
     money += _;
     // Print to page 
-    _MathID.innerHTML = "Day: " + counter + "<br>";
+    _MathID.innerHTML = "Day: " + day + "<br>";
     _MathID.innerHTML += "Balance: " + money + "&yen;";
 }
 
@@ -81,4 +82,22 @@ function BTN_ModulusOperators() {
     var math_Neg = -_A;
     // Print to page 
     _MathID.innerHTML = "math_Neg: " + math_Neg + " [ changed from: " + _A + " ]";
+}
+
+function BTN_Increment() {
+    var _MathID = document.getElementById("Math_IncDec");
+    _MathID.innerHTML = "";
+    // Variables
+    counter++;
+    // Print to page 
+    _MathID.innerHTML = "math_IncDec: " + counter;
+}
+
+function BTN_Decrement() {
+    var _MathID = document.getElementById("Math_IncDec");
+    _MathID.innerHTML = "";
+    // Variables
+    counter--;
+    // Print to page 
+    _MathID.innerHTML = "math_IncDec: " + counter;
 }
