@@ -110,3 +110,20 @@ function BTN_Random() {
     // Print to page 
     _MathID.innerHTML = "math_RND: " + rnd;
 }
+
+var stock = 100;
+
+function BTN_Math_MOC() {
+    var _MathID = document.getElementById("Math_MOC");
+    _MathID.innerHTML = "Value: ";
+    // Variables
+    var rnd_A = (Math.floor(Math.random() * 10) + 1);
+    var rnd_B = (Math.floor(Math.random() * 10) + 1);
+    var _sin = Math.sin((rnd_A * rnd_B) * Math.LN10);
+    var _ = Math.floor(stock * (_sin / 10));
+    if (stock < 15) { _ = rnd_A * 10 }
+    stock += _;
+    // Print to page 
+    _MathID.innerHTML += stock;
+    _MathID.innerHTML += "<br>Change: " + _ + "";
+}
