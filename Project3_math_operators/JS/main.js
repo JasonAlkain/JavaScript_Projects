@@ -61,3 +61,14 @@ function BTN_MultipleOperators() {
     // Print to page 
     _MathID.innerHTML = "math_MO: <br>2 * (" + pi_A + " / " + pi_B + ") * " + r + " = <br>" + C;
 }
+
+function BTN_ModulusOperators() {
+    var _MathID = document.getElementById("Math_Mod");
+    _MathID.innerHTML = "";
+    // Variables
+    var _A = 25;
+    var _B = 6;
+    var math_Mod = _A % _B;
+    // Print to page 
+    _MathID.innerHTML = "math_Div: " + _A + " % " + _B + " = " + math_Mod;
+}
