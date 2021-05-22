@@ -45,7 +45,9 @@ function BTN_IfStatment() {
     /* */
     var dateElement = document.getElementById('ifStatment');
     /* */
-    var dateSplit = Date().split("");
+    var date = Date();
+    console.log("date " + date);
+    var dateSplit = date.split("");
     var strNew = "";
     /* */
     dateSplit.forEach(ds => {
@@ -84,5 +86,3 @@ function BTN_Roll() {
     Calc.innerHTML = strNew;
 
 }
-
-/* */
