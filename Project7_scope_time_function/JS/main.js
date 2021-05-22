@@ -37,7 +37,7 @@ function BTN_Scope() {
 }
 
 /* =========================================
-    IF STATEMENT ASSIGNMENT
+    IF/ELSE/ELSE-IF STATEMENT ASSIGNMENT
 ========================================= */
 
 
