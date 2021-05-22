@@ -1,11 +1,13 @@
 body {
     background-color: midnightblue;
     color: whitesmoke;
+    display: block;
 }
 
 button {
     display: inline-block;
     padding: 15px 25px;
+    margin: auto;
     font-size: large;
     cursor: pointer;
     text-align: center;
