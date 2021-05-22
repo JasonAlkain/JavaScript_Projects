@@ -60,3 +60,29 @@ function BTN_IfStatment() {
     /* */
     dateElement.innerHTML = strNew;
 }
+
+/* =========================================
+    IF/ELSE/ELSE-IF STATEMENT ASSIGNMENT
+========================================= */
+
+/* */
+function BTN_Roll() {
+    /* */
+    var Calc = document.getElementById('Calc');
+    var acAmount = document.getElementById('acAmount').value;
+    /* */
+    var dice = Math.floor(Math.floor(Math.random() * 20) + 1);
+    var strNew = "";
+    if (dice > acAmount) {
+        strNew = "Hit";
+    } else if (dice == acAmount) {
+        strNew = "Tie";
+    } else {
+        strNew = "Missed";
+    }
+    /* */
+    Calc.innerHTML = strNew;
+
+}
+
+/* */
