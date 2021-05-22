@@ -10,6 +10,7 @@ function OnLoad() {
     DoubleEqual();
     TripleEqual();
     OperatorFun();
+    NotOperatorFun();
 }
 
 function TypeCoercion() {
@@ -83,7 +84,32 @@ function OperatorFun() {
     /**/
     operator.innerHTML +=
         "Operator And:<br>" +
-        _B + " == " + _C + " && \'" + _A + "\' === divider <br>" +
-        (_B == _C && _A === divider) +
+        _B + " == " + _C + " && \'" + _A + "\' === \'divider\' <br>" +
+        (_B == _C && _A === "divider") +
+        divider;
+}
+
+function NotOperatorFun() {
+    /**/
+    var operator = document.getElementById("notOperator");
+    operator.innerHTML = "";
+    /**/
+    var divider = "<br><div style=\"margin: 0 auto; border-top: 1px solid black;\"></div><br>";
+    var _A = "5";
+    var _B = 5;
+    var _C = 5;
+    /**/
+    operator.innerHTML += divider;
+    /**/
+    operator.innerHTML +=
+        "Operator Not:<br>" +
+        _B + " != " + _C + "<br>" +
+        (_B != _C) +
+        divider;
+    /**/
+    operator.innerHTML +=
+        "Inverted Answer:<br>" +
+        "!(" + _B + " == " + _C + " )<br>" +
+        !(_B == _C) +
         divider;
 }
