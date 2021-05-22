@@ -45,9 +45,8 @@ function BTN_IfStatment() {
     /* */
     var dateElement = document.getElementById('ifStatment');
     /* */
-    var date = Date();
-    console.log("date " + date);
-    var dateSplit = date.split("");
+    var dateSplit = Date().split("");
+    console.log(Date());
     var strNew = "";
     /* */
     dateSplit.forEach(ds => {
@@ -56,9 +55,12 @@ function BTN_IfStatment() {
         } else if (ds == "(" || ds == ")") {
             strNew += "";
         } else {
-            strNew += ds;
+            // this is the problem child...
+            // should use '+=' not '='
+            strNew = ds;
         }
     });
+    console.log(strNew);
     /* */
     dateElement.innerHTML = strNew;
 }
