@@ -24,7 +24,6 @@ function BTN_LocalGlobal() {
 
 function BTN_Scope() {
     /* */
-    // clear the element text
     var dateElement = document.getElementById('date');
     /* */
     var dateHours = new Date().getHours();
@@ -34,5 +33,30 @@ function BTN_Scope() {
         dateElement.innerHTML = "How Are you this afternoon? | The hour is: " + dateHours;
     }
 
+    dateElement.innerHTML = strNew;
+}
+
+/* =========================================
+    IF STATEMENT ASSIGNMENT
+========================================= */
+
+
+function BTN_IfStatment() {
+    /* */
+    var dateElement = document.getElementById('ifStatment');
+    /* */
+    var dateSplit = Date().split("");
+    var strNew = "";
+    /* */
+    dateSplit.forEach(ds => {
+        if (ds == " ") {
+            strNew += "<br>" + ds;
+        } else if (ds == "(" || ds == ")") {
+            strNew += "";
+        } else {
+            strNew += ds;
+        }
+    });
+    /* */
     dateElement.innerHTML = strNew;
 }
