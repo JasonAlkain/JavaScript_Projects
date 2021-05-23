@@ -72,9 +72,6 @@ function BTN_SEARCH() {
     var Result = document.getElementById("result");
     var SearchTerm = document.getElementById("searchTerm").value;
     /* */
-    console.log(Sercher.innerHTML);
-    console.log(SearchTerm);
-    /* */
     function myFunction(strSearch, term) {
         var n;
         if (term != "") {
@@ -99,3 +96,23 @@ function BTN_SEARCH() {
 /* =========================================
     END MORE METHODS CHALLENGE
 ========================================= */
+
+/* =========================================
+    NUMBER METHODS
+========================================= */
+function BTN_TOSTR() {
+    /* */
+    var toStr = document.getElementById("toStr");
+    /* */
+    var pi = 22 / 7;
+    /* */
+    toStr.innerHTML =
+        "Variable Value:<br>" +
+        pi + "<br>" +
+        "Variable Type:<br>" +
+        typeof(pi) + "<br><br>" +
+        "Variable Value:<br>" +
+        pi.toString() + "<br>" +
+        "Variable Type:<br>" +
+        typeof(pi.toString());
+}
