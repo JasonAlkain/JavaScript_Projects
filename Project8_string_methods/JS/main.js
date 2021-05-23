@@ -116,3 +116,16 @@ function BTN_TOSTR() {
         "Variable Type:<br>" +
         typeof(pi.toString());
 }
+
+/* =========================================
+    TOPRECISION() METHOD
+========================================= */
+function BTN_TOPRECISION() {
+    /* */
+    var toPre = document.getElementById("precision");
+    /* */
+    var rnd = ((Math.random() * 10) + 1);
+    var result = rnd.toPrecision(3);
+    /* */
+    toPre.innerHTML = result;
+}
