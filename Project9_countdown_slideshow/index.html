@@ -7,23 +7,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project8</title>
     <link rel="stylesheet" href="../CSS/style.css">
-    <script src="./JS/main.js"></script>
+    <link rel="stylesheet" href="./CSS/main.css">
 </head>
 
 <body>
-    <!---->
+    <!--
     <div class="container">
         <div>
             <h1>CONCAT</h1>
             <div class="fluff">
-                <button onclick="()">BTN</button>
+                <button onclick="">BTN</button>
                 <div class="counter">
                     <p id="">+++</p>
                 </div>
             </div>
         </div>
     </div>
+    -->
     <!---->
+    <div class="container_slides">
+        <div style="text-align: center;">
+            <h1>Slideshow</h1>
+        </div>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="slide fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="https://cdn.nimbusthemes.com/blog/free-stock-photography/prairie/free-stock-photos-prairie_0001.jpg">
+                <div class="text">
+                    <p>Vally of Grass</p>
+                </div>
+            </div>
+
+            <!-- Full-width images with number and caption text -->
+            <div class="slide fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="https://www.publicdomainpictures.net/pictures/30000/velka/evening-landscape-13530956185Aw.jpg">
+                <div class="text">
+                    <p>Lake and Mountain</p>
+                </div>
+            </div>
+
+            <!-- Full-width images with number and caption text -->
+            <div class="slide fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fget.pxhere.com%2Fphoto%2Ftable-landscape-sea-water-horizon-black-and-white-sky-photography-chair-lake-travel-reflection-symbol-entrance-calm-religion-asia-ancient-landmark-historic-furniture-monochrome-tourism-gate-japan-zen-religious-temple-japanese-shrine-tori-torii-kyoto-culture-famous-heritage-shinto-traditional-b-w-still-life-photography-product-design-monochrome-photography-biwa-1374870.jpg&f=1&nofb=1">
+                <div class="text">
+                    <p>Shinto Gate</p>
+                </div>
+            </div>
+
+            <!-- Full-width images with number and caption text -->
+            <div class="slide fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aa79f1b1-4db2-4bae-9326-04c54b9f2c94/db4cmf2-c1d5a679-1a03-4b4f-9199-fadddc87095f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sIm9iaiI6W1t7InBhdGgiOiIvZi9hYTc5ZjFiMS00ZGIyLTRiYWUtOTMyNi0wNGM1NGI5ZjJjOTQvZGI0Y21mMi1jMWQ1YTY3OS0xYTAzLTRiNGYtOTE5OS1mYWRkZGM4NzA5NWYucG5nIn1dXX0.W-7WPkkBiI89YaSV3Tu-iFIAqU7r4YikbsFlC_378EA">
+                <div class="text">
+                    <p>VN Classroom Art</p>
+                </div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="PlusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="PlusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="CurrentSlide(1)"></span>
+            <span class="dot" onclick="CurrentSlide(2)"></span>
+            <span class="dot" onclick="CurrentSlide(3)"></span>
+            <span class="dot" onclick="CurrentSlide(4)"></span>
+        </div>
+    </div>
+    <!---->
+    <!---->
+    <div class="container">
+        <h1>Timer</h1>
+        <h3>Time until graduation</h3>
+        <div class="counter">
+            <p id="demo"></p>
+        </div>
+        <div></div>
+        <p style="font-size:xx-small;">here's to hoping I pass!!!</p>
+    </div>
+    <!---->
+    <!---->
+    <script src="./JS/main.js"></script>
 </body>
 
 </html>
