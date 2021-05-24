@@ -44,6 +44,10 @@ li {
     padding: 8px;
 }
 
+h1 {
+    text-transform: uppercase;
+}
+
 .container {
     border-top: 2px solid black;
     border-bottom: 2px solid black;
@@ -51,6 +55,15 @@ li {
     margin: 8px 16px;
     padding: 1em;
     text-align: center;
+}
+
+.container_slides {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 8px;
+    margin: 8px 16px;
+    padding: 32px;
+    height: 650px;
 }
 
 .counter {
