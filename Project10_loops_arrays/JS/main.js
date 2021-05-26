@@ -10,3 +10,13 @@ function Call_Loop() {
     }
     document.getElementById("Loop").innerHTML = text;
 }
+
+function For_Loop() {
+    var instruments = ["Guitar", "Drums", "Piano", "Bass", "Violin", "Trumpet", "Flute"];
+    var text = "Instruments:<br>";
+
+    for (var i = 0; i < instruments.length; i++) {
+        text += instruments[i] + "<br>";
+    }
+    document.getElementById("forLoop").innerHTML = text;
+}
