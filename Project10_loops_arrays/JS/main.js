@@ -20,3 +20,12 @@ function For_Loop() {
     }
     document.getElementById("forLoop").innerHTML = text;
 }
+
+function Array() {
+    var strAry = ["Guitar", "Drums", "Piano", "Bass", "Violin", "Trumpet", "Flute", "Cello"];
+    var text = "Instruments:<br>";
+
+    strAry.forEach(item => { text += item + "<br>"; });
+
+    document.getElementById("array").innerHTML = text;
+}
