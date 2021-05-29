@@ -49,3 +49,24 @@ document.getElementById("letKeyword_3").innerHTML = "Second check: " + global_X;
 /* ================================================================
     END LET KEYWORD ASSIGNMENT
 ================================================================ */
+
+/* ================================================================
+    OBJECT ASSIGNMENT
+================================================================ */
+
+function DisplayObect() {
+    var objThing = {
+        Name: "Son Goku",
+        Race: "Saiyan",
+        Power: "8001 (9001 in english)",
+        Description: function() {
+            return this.Name + " is a " + this.Race + " with a power level of " + this.Power + ".";
+        }
+    }
+
+    document.getElementById("objThing").innerHTML = "Object:<br> " + objThing.Description();
+}
+
+/* ================================================================
+    END OBJECT ASSIGNMENT
+================================================================ */
