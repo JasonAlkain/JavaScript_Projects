@@ -29,3 +29,23 @@ function Array() {
 
     document.getElementById("array").innerHTML = text;
 }
+
+
+/* ================================================================
+    LET KEYWORD ASSIGNMENT
+================================================================ */
+var global_X = 123;
+var letCounter = 0;
+document.getElementById("letKeyword_1").innerHTML = "Initial: " + global_X;
+
+function Let_Keyword() {
+    let global_X = letCounter++;
+
+    document.getElementById("letKeyword_2").innerHTML = "In scope: " + global_X;
+}
+
+document.getElementById("letKeyword_3").innerHTML = "Second check: " + global_X;
+
+/* ================================================================
+    END LET KEYWORD ASSIGNMENT
+================================================================ */
