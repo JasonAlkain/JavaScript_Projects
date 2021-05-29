@@ -70,3 +70,37 @@ function DisplayObect() {
 /* ================================================================
     END OBJECT ASSIGNMENT
 ================================================================ */
+
+/* ================================================================
+    BREAK AND CONTINUE CHALLENGE
+================================================================ */
+
+function getRngInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function Breaking() {
+    var text = "";
+    var i;
+    var rng = getRngInt(3, 20);
+    for (i = 0; i < 25; i++) {
+        if (i === rng) { break; }
+        text += "The number is " + i + "<br>";
+    }
+    document.getElementById("broken").innerHTML = text;
+}
+
+function Continuing() {
+    var text = "";
+    var i;
+    var rng = getRngInt(3, 20);
+    for (i = 0; i < 25; i++) {
+        if (i === rng) { continue; }
+        text += "The number is " + i + "<br>";
+    }
+    document.getElementById("continuing").innerHTML = text;
+}
+
+/* ================================================================
+    END BREAK AND CONTINUE CHALLENGE
+================================================================ */
