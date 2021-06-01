@@ -8,12 +8,46 @@
     <title>Contact Form Challenge</title>
     <!---->
     <link rel="stylesheet" href="../CSS/style.css">
-    <script src="./JS/Javascript_1.js" defer></script>
+    <link rel="stylesheet" href="./CSS/CSS_1.css">
+    <script src="./JS/Javascript_2.js" defer></script>
     <!---->
 </head>
 
 <body>
-
+    <!---->
+    <div class="container">
+        <h1>Form</h1>
+        <h3></h3>
+        <div>
+            <div class="heading-padding">
+                <h1 class="heading-padding">Contact Us</h1>
+                <div class="reservation">
+                    <h2><span>Join us on our journy and subscibe to our lastest productions.</span>
+                        <br> Contact us for more information!
+                    </h2>
+                    <p class="contact-text">
+                        Please provide us with your basic contact info.
+                    </p>
+                    <div class="contact-form">
+                        <form name="rsvpForm" action="https://formspree.io/f/mbjqgzpz" method="post" onsubmit="return validateForm()">
+                            <input class="rsvp" type="text" value="" name="fname" placeholder="First Name">
+                            <input class="rsvp" type="text" value="" name="lname" placeholder="Last Name">
+                            <input class="rsvp" type="text" value="" name="email" placeholder="Email Address">
+                            <input class="rsvp" type="text" value="" name="phone" placeholder="Phone number">
+                            <textarea type="text" name="message" placeholder="Enter your message here..."></textarea>
+                            <div class="form-spacer">
+                                <label class="terms">Terms and Conditions</label>
+                            </div>
+                            <div class="submit">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
 </body>
 
 </html>
