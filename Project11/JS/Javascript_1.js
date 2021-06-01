@@ -49,3 +49,34 @@ function MultiClass() {
 /* =================================================
     END DOCUMENT.GETELEMENTSBYCLASSNAME() METHOD ASSIGNMENT
 ================================================= */
+/* =================================================
+    CANVAS CHALLENGE
+================================================= */
+
+function BTN_DrawCircle() {
+    var c = document.getElementById("canvas_Name");
+    var ctx = c.getContext("2d");
+
+    ctx.beginPath();
+    ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.fillStyle = "#65FF8050";
+    ctx.fill();
+}
+
+function BTN_DrawTriangle() {
+    var c = document.getElementById("canvas_Name");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.moveTo(100, 100);
+    ctx.lineTo(100, 300);
+    ctx.lineTo(300, 300);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fillStyle = "#6044FF50";
+    ctx.fill();
+}
+
+/* =================================================
+    END CANVAS CHALLENGE
+================================================= */
