@@ -60,7 +60,12 @@ function BTN_DrawCircle() {
     ctx.beginPath();
     ctx.arc(95, 50, 40, 0, 2 * Math.PI);
     ctx.stroke();
-    ctx.fillStyle = "#65FF8050";
+
+    var grd = ctx.createLinearGradient(0, 0, 170, 0);
+    grd.addColorStop(0, "midnightblue");
+    grd.addColorStop(1, "lightblue");
+
+    ctx.fillStyle = grd;
     ctx.fill();
 }
 
@@ -68,11 +73,21 @@ function BTN_DrawTriangle() {
     var c = document.getElementById("canvas_Name");
     var ctx = c.getContext("2d");
     ctx.beginPath();
+    // Triangle 1
     ctx.moveTo(100, 100);
     ctx.lineTo(100, 300);
     ctx.lineTo(300, 300);
     ctx.closePath();
+    // Triangle 2
+    ctx.moveTo(100, 100);
+    ctx.lineTo(300, 100);
+    ctx.lineTo(300, 300);
+    ctx.closePath();
+    // the outline
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "white";
     ctx.stroke();
+    // the fill
     ctx.fillStyle = "#6044FF50";
     ctx.fill();
 }
