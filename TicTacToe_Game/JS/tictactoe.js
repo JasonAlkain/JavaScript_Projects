@@ -37,7 +37,7 @@ function PlaceX_O(squareNumber) {
         // 
         if (activePlayer === 'O') {
             //
-            //DisableClick();
+            DisableClick();
             //
             setTimeout(() => { ComputersTurn(); }, 1000);
         }
@@ -105,7 +105,7 @@ function CheckWinConditions() {
     //
     else if (selectedSquares.length >= 9) {
         //
-        //PlayAudio('./Sound/tie.mp3');
+        PlayAudio('./Sound/tie.mp3');
         //
         setTimeout(() => { ResetGame(); }, 1000);
     }
@@ -122,4 +122,20 @@ function CheckWinConditions() {
         //
         if (A === true && B === true && C === true) { return true; }
     }
+}
+
+function PlayAudio(audioURL) {
+    //
+    let audio = new Audio(audioURL);
+    //
+    audio.play();
+}
+
+function DisableClick() {
+    //
+    body.style.pointerEvents = 'none';
+    //
+    setTimeout(() => {
+        body.style.pointerEvents = 'auto';
+    }, 1000);
 }
