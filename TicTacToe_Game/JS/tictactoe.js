@@ -11,6 +11,8 @@ function PlaceX_O(squareNumber) {
     if (!selectedSquares.some(element => element.includes(squareNumber))) {
         //
         let select = document.getElementById(squareNumber);
+        console.log(squareNumber);
+        console.log(select);
         //
         if (activePlayer === 'X') {
             //
@@ -124,13 +126,6 @@ function CheckWinConditions() {
     }
 }
 
-function PlayAudio(audioURL) {
-    //
-    let audio = new Audio(audioURL);
-    //
-    audio.play();
-}
-
 function DisableClick() {
     //
     body.style.pointerEvents = 'none';
@@ -140,57 +135,68 @@ function DisableClick() {
     }, 1000);
 }
 
-function DrawWinLine(coordX1, coordX2, coordY1, coordY2) {
+function PlayAudio(audioURL) {
     //
-    const canvas = document.getElementById('win-lines');
+    let audio = new Audio(audioURL);
     //
-    const c = canvas.getContext('2d');
+    audio.play();
+}
+
+function DrawWinLine(coordX1, coordY1, coordX2, coordY2) {
+    //
+    const CANVAS = document.getElementById('win-lines');
+    //
+    const _C = CANVAS.getContext('2d');
     //
     let x1 = coordX1,
-        x2 = coordX2,
         y1 = coordY1,
+        x2 = coordX2,
         y2 = coordY2,
         x = x1,
         y = y1;
 
+
+    //
     function AnimateLineDrawing() {
         //
-        const animationLoop = requestAnimationFrame(AnimateLineDrawing);
+        const ANIMATION_LOOP = requestAnimationFrame(AnimateLineDrawing);
         //
-        c.clearRect(0, 0, 608, 608);
+        _C.clearRect(0, 0, 608, 608);
         //
-        c.beginPath();
+        _C.beginPath();
         //
-        c.moveTo(x1, y1);
+        _C.moveTo(x1, y1);
         //
-        c.moveTo(x, y);
+        _C.moveTo(x, y);
         //
-        c.lineWidth = 10;
+        _C.lineWidth = 10;
         //
-        c.strokeStyle = 'rgba(70, 255, 3, 0.8)';
+        _C.strokeStyle = 'rgba(70, 255, 3, 0.8)';
         //
-        c.stroke();
+        _C.stroke();
         //
         if (x1 <= x2 && y1 <= y2) {
             //
             if (x < x2) { x += 10; }
             if (y < y2) { y += 10; }
-            if (x >= x2 && y >= y2) { cancelAnimationFrame(animationLoop()); }
+            if (x >= x2 && y >= y2) { cancelAnimationFrame(ANIMATION_LOOP); }
         }
         //
         if (x1 <= x2 && y1 >= y2) {
             //
             if (x < x2) { x += 10; }
             if (y > y2) { y -= 10; }
-            if (x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop()); }
+            if (x >= x2 && y <= y2) { cancelAnimationFrame(ANIMATION_LOOP); }
         }
     }
 
     function Clear() {
         //
-        const animationLoop = requestAnimationFrame(Clear);
+        const ANIMATION_LOOP = requestAnimationFrame(Clear);
         //
-        c.clearRect(0, 0, 608, 608);
+        _C.clearRect(0, 0, 608, 608);
+        //
+        cancelAnimationFrame(ANIMATION_LOOP);
     }
     //
     DisableClick();
@@ -203,4 +209,14 @@ function DrawWinLine(coordX1, coordX2, coordY1, coordY2) {
         Clear();
         ResetGame();
     }, 1000);
+}
+
+//
+function ResetGame() {
+    //
+    for (let i = 0; i < 9; i++) {
+        let square = document.getElementById(String(i));
+        //
+        square.style.background = '';
+    }
 }
