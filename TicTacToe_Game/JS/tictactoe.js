@@ -3,7 +3,7 @@ let activePlayer = 'X';
 //
 let selectedSquares = [];
 
-//
+// Function to place an 'X' or an 'O'
 function PlaceX_O(squareNumber) {
     //
     //
@@ -181,7 +181,7 @@ function DrawWinLine(coordX1, coordY1, coordX2, coordY2) {
             if (y < y2) { y += 10; }
             if (x >= x2 && y >= y2) { cancelAnimationFrame(ANIMATION_LOOP); }
         }
-        //
+        // 
         if (x1 <= x2 && y1 >= y2) {
             //
             if (x < x2) { x += 10; }
@@ -191,32 +191,35 @@ function DrawWinLine(coordX1, coordY1, coordX2, coordY2) {
     }
 
     function Clear() {
-        //
+        // Gets the current animation frame
         const ANIMATION_LOOP = requestAnimationFrame(Clear);
-        //
+        // Clears canavs
         _C.clearRect(0, 0, 608, 608);
-        //
+        // Stops animation
         cancelAnimationFrame(ANIMATION_LOOP);
     }
-    //
+    // Disables click
     DisableClick();
-    //
+    // Play win game sound.
     PlayAudio('./Sound/winGame.mp3');
-    // 
+    // Start animating line draw
     AnimateLineDrawing();
-    //
+    // Reset game after a 1 second
     setTimeout(() => {
         Clear();
         ResetGame();
     }, 1000);
 }
 
-//
+// Resets game board
 function ResetGame() {
-    //
+    // Loop over the 9 square elements
     for (let i = 0; i < 9; i++) {
+        // Gets the square element
         let square = document.getElementById(String(i));
-        //
+        // cleans up the backgounds of the square
         square.style.background = '';
     }
+    // Resets array for next game
+    selectedSquares = [];
 }
