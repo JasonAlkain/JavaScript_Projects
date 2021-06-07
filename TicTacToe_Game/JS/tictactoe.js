@@ -69,6 +69,7 @@ function PlaceX_O(squareNumber) {
 
 }
 
+// Checks if there is a winning row or a tie game
 function CheckWinConditions() {
     //
     if (ArrayIncludes('0X', '1X', '2X')) { DrawWinLine(50, 100, 558, 100) }
