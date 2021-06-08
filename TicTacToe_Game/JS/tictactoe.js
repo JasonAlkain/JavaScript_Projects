@@ -168,7 +168,7 @@ function DrawWinLine(coordX1, coordY1, coordX2, coordY2) {
         //
         _C.moveTo(x1, y1);
         //
-        _C.moveTo(x, y);
+        _C.lineTo(x, y);
         //
         _C.lineWidth = 10;
         //
