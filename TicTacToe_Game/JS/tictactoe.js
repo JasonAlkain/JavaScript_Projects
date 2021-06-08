@@ -35,7 +35,7 @@ function PlaceX_O(squareNumber) {
         }
 
         // Now we do audio!!
-        //PlayAudio('./Sound/place.mp3');
+        PlayAudio('./Sound/place.mp3');
         // 
         if (activePlayer === 'O') {
             //
