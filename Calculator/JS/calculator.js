@@ -1,4 +1,4 @@
-//
+// Creates and object to keep track of values
 const CALCULATOR = {
     //
     Display_Value: '0',
@@ -10,7 +10,7 @@ const CALCULATOR = {
     Operator: null,
 };
 
-//
+// This modifies values each time a button is clicked
 function Input_Digit(digit) {
     const { Display_Value, Wait_Second_Operand } = CALCULATOR;
     //
@@ -83,7 +83,6 @@ function Calculato_Reset() {
     CALCULATOR.Wait_Second_Operand = false;
     CALCULATOR.Operator = null;
 }
-
 // Updates the Display
 function Update_Display() {
     const DISPLAY = document.querySelector('.calculator-screen');
@@ -97,25 +96,27 @@ const _KEYS = document.querySelector('.calculator-keys');
 _KEYS.addEventListener('Click', (event) => {
     //
     //
-    const { Target } = event;
+    const { _Target } = event;
+    const Update_H1 = document.getElementById('target');
+    Update_H1.innerHTML = _Target.value;
     //
-    if (!Target.matches('button')) { return; }
-    if (Target.classList.contains('operator')) {
-        Handle_Operator(Target.value);
+    if (!_Target.matches('button')) { return; }
+    if (_Target.classList.contains('operator')) {
+        Handle_Operator(_Target.value);
         Update_Display();
         return;
     }
-    if (Target.classList.contains('decimal')) {
-        Input_Decimal(Target.value);
+    if (_Target.classList.contains('decimal')) {
+        Input_Decimal(_Target.value);
         Update_Display();
         return;
     }
-    if (Target.classList.contains('all-clear')) {
+    if (_Target.classList.contains('all-clear')) {
         Calculato_Reset();
         Update_Display();
         return;
     }
 
-    Input_Digit(Target.value);
+    Input_Digit(_Target.value);
     Update_Display();
 })
