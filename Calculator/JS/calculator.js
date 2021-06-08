@@ -41,7 +41,7 @@ function Input_Decimal(dot) {
 }
 
 /*=================================================================================*/
-function Handle_Operand(Next_Operator) {
+function Handle_Operator(Next_Operator) {
     const { First_Operand, Display_Value, Operator } = CALCULATOR;
     //
     //
@@ -98,9 +98,6 @@ function Calculato_Reset() {
 function Update_Display() {
     const DISPLAY = document.querySelector('.calculator-screen');
     DISPLAY.value = CALCULATOR.Display_Value;
-    // TODO: Reomve console.log()
-    // This is just for testing
-    console.log("updated");
 }
 
 
@@ -108,37 +105,34 @@ function Update_Display() {
 // Updates the display at least once
 Update_Display()
 
-//
+// Gets the keys area
 const _KEYS = document.querySelector('.calculator-keys');
-// Adds a listener event to every button
-// 'event' in this case may be deprecated...
-_KEYS.addEventListener('Click', (event) => {
-    // 
-    // 
-    const { _Target } = event;
-    console.log("Event: " + _Target);
+// Adds a listener event
+_KEYS.addEventListener('click', (event) => {
+    // This needs to be exactly "target" for some reason...
+    const { target } = event;
     //
-    if (!_Target.matches('button')) { return; }
+    if (!target.matches('button')) { return; }
     //
-    if (_Target.classList.contains('operator')) {
-        Handle_Operator(_Target.value);
+    if (target.classList.contains('operator')) {
+        Handle_Operator(target.value);
         Update_Display();
         return;
     }
     //
-    if (_Target.classList.contains('decimal')) {
-        Input_Decimal(_Target.value);
+    if (target.classList.contains('decimal')) {
+        Input_Decimal(target.value);
         Update_Display();
         return;
     }
     //
-    if (_Target.classList.contains('all-clear')) {
+    if (target.classList.contains('all-clear')) {
         Calculato_Reset();
         Update_Display();
         return;
     }
 
     //
-    Input_Digit(_Target.value);
+    Input_Digit(target.value);
     Update_Display();
 })
