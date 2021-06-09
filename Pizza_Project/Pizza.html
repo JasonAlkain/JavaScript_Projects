@@ -12,7 +12,35 @@
 </head>
 
 <body>
+    <div class="menuBG">
+        <h1 style="margin: 0 0px 0 20px;">Pizza Drill Tutorial</h1>
+        <input id="btnOrder" type="button" onclick="GetReceipt()" value="Place Order">
+        <form id="frmMenu">
+            <div class="menu-left">
+                <h3>Size:</h3>
+                <input class="size" type="radio" name="Size" value="Personal Pizza" id="">Personal Pizza <br>
+                <input class="size" type="radio" name="Size" value="Small Pizza" id="">Small Pizza <br>
+                <input class="size" type="radio" name="Size" value="Medium Pizza" id="">Medium Pizza <br>
+                <input class="size" type="radio" name="Size" value="Large Pizza" id="">Large Pizza <br>
+                <input class="size" type="radio" name="Size" value="Extra Large Pizza" id="">Extra Large Pizza <br>
+            </div>
+            <div class="menu-right">
+                <h3>Meats:</h3>
+                <input class="toppings" type="checkbox" name="Topping" value="Pepperoni" id="">Pepperoni<br>
+                <input class="toppings" type="checkbox" name="Topping" value="Sauage" id="">Sauage<br>
+                <input class="toppings" type="checkbox" name="Topping" value="Canadian Bacon" id="">Canadian Bacon<br>
+                <input class="toppings" type="checkbox" name="Topping" value="Ground Beef" id="">Ground Beef<br>
+                <input class="toppings" type="checkbox" name="Topping" value="Anchocy" id="">Anchocy<br>
+                <input class="toppings" type="checkbox" name="Topping" value="Chicken" id="">Chicken spelled D-O-G<br>
+                <input class="toppings" type="checkbox" name="Topping" value="Salami" id="">Salami<br>
 
+            </div>
+            <div id="cart">
+                <div id="showText"></div>
+                <div id="totalPrice"></div>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
