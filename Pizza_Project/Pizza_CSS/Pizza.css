@@ -19,13 +19,13 @@ div {
 }
 
 #menuBG {
-    width: 600px;
+    width: 750px;
     height: 470px;
     margin: 10px auto;
 }
 
 #frmMenu {
-    width: 900px;
+    width: 750px;
     height: 200px;
 }
 
@@ -37,22 +37,22 @@ div {
 }
 
 .left {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     margin: 0 auto;
     float: left;
 }
 
 .right {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     margin: 0 auto;
     float: right;
 }
 
 .center {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     margin: 0 auto;
     float: left;
 }
