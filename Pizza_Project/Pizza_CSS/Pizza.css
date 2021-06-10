@@ -50,6 +50,13 @@ div {
     float: right;
 }
 
+.center {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    float: left;
+}
+
 #showText {
     width: 200px;
     height: 190;
