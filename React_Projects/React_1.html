@@ -9,19 +9,26 @@
     <!--  -->
     <!-- <script src="./JS/react.js"></script>
     <script src="./JS/react-dom.js"></script> -->
-    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <!-- <script src="https://unpkg.com/react@16/umd/react.development.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.min.js"></script> -->
+    <!--  -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <!--  -->
+    <!-- <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!--  -->
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 
 <body>
     <!--  -->
-    <!-- <div class="container">
+    <div class="container">
         <div class="counter">
-            <div id="My_React_Code">
+            <div>
+                <div id="My_React_Code"></div>
                 <p>My React Code started running # seconds ago!</p>
-                <script>
+                <!-- <script>
                     var Counter = React.createClass({
                         render: function() {
                             var time_Passed = Math.round(this.props.time_Passed / 100);
@@ -43,18 +50,18 @@
                             document.getElementById('My_React_Code')
                         );
                     }, 50);
-                </script>
+                </script> -->
 
             </div>
         </div>
-    </div> -->
+    </div>
     <!--  -->
     <div class="container">
         <div class="counter">
             <div>
                 <div id="like_btn_container"></div>
-
-                <script>
+                <button>Like</button>
+                <!-- <script>
                     const X = React.createElement;
 
                     class likeBTN extends React.Component {
@@ -84,6 +91,25 @@
                     const DOM_CONTAINER = document.querySelector('#like_btn_container');
 
                     ReactDOM.render(X(likeBTN), DOM_CONTAINER);
+                </script> -->
+
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="container">
+        <div class="counter">
+            <div>
+                <div class="counter" id="JSX_Test"></div>
+                <h1>SET</h1>
+
+                <script type="text/babel">
+                    const ELEMENT =
+                    <h1>Hello, world!</h1>
+
+                    class Greeting extends React.Component { render() { return ELEMENT } } ReactDOM.render(
+
+                    <Greeting />, document.getElementById('JSX_Test'))
                 </script>
 
             </div>
